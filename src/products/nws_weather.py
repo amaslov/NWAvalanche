@@ -43,7 +43,12 @@ NAMED_LOCATIONS: dict[str, NamedLocation] = {
     ),
     "MT_ST_HELENS": NamedLocation("Mt St Helens", 46.1991, -122.1873, "summit"),
     "HURRICANE_RIDGE": NamedLocation("Hurricane Ridge", 47.967, -123.498, "Olympic NP"),
-    "WEST_RAINIER": NamedLocation("West Mt Rainier", 46.870, -121.760, "Cougar Rock area"),
+    "WEST_RAINIER": NamedLocation(
+        "West Mt Rainier", 46.870, -121.760, "upper west slopes (NWS gridpoint ~10,800 ft)"
+    ),
+    "PARADISE": NamedLocation(
+        "Paradise (Mt Rainier south)", 46.7866, -121.7350, "Paradise visitor area"
+    ),
     "MAZAMA": NamedLocation("Mazama", 48.5917, -120.4006, "Methow Valley"),
     "MISSION_RIDGE": NamedLocation("Mission Ridge", 47.286, -120.399, "ski area"),
     "WHITE_PASS": NamedLocation("White Pass", 46.6357, -121.3941, "summit"),
