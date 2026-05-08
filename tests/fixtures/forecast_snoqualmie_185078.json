@@ -1,0 +1,208 @@
+{
+  "id": 185078,
+  "published_time": "2026-04-19T01:30:00+00:00",
+  "expires_time": "2026-04-20T01:30:00+00:00",
+  "created_at": "2026-04-19T01:24:32+00:00",
+  "updated_at": "2026-04-19T01:33:53+00:00",
+  "author": "Dallas Glass",
+  "product_type": "forecast",
+  "bottom_line": "<p>Warm and mostly sunny weather could make some of the recent snow weak and unstable. You may seen rollerballs and natural avalanches, even on northerly aspects. Pay attention to what&rsquo;s above you, most of these slides start in very steep, rocky terrain.</p>",
+  "hazard_discussion": "<p><strong>This will be the last avalanche forecast for the 25-26 season. Mountain weather forecasts will be published each afternoon through May 3rd. NWAC will continue to monitor conditions and issue special avalanche bulletins and warnings as needed. A huge thanks to everyone in our community for your support this winter!</strong></p>\n<p>After a cool and snowy week, spring has roared back into the mountains. High temperatures on Saturday reached into the mid to upper 40s! Temperatures on Sunday should even climb a few degrees higher.&nbsp;</p>\n<p>The big question for Sunday will be the skies. Mostly clear skies Saturday night should allow the surface to freeze and from a thin breakable crust in open areas. That new crust probably won&rsquo;t last long on Sunday, especially if the sun comes out. Thin mid and high level clouds, could keep conditions from going full &ldquo;blue bird&rdquo; but likely won&rsquo;t be enough to keep the effects of the sun at bay. What&rsquo;s the best way to gauge this? If you&rsquo;re feeling the sun, so is the snow.&nbsp;</p>\n<p>Last week&rsquo;s storm brought alot of snow to the Pass. Totals varied greatly by elevations, with only 10inches at Pass level, 24 inches at middle elevations, and nearly 30 inches up high! This new snow is generally right side up and well bonded to the underlying 4/14 crust. Any subtle inter-storm layers shouldn&rsquo;t be an issue at this point, but you may find an isolated pocket of wind drifted snow in high, northerly terrain.&nbsp;</p>\n<p>During these warm sunny spells, the spring shed in the mountains may continue. Cornice collaposes, glide avalanches, and simply snow falling off rocks could occur. Fortunately, after this winter, there&rsquo;s not much left to come crashing down.&nbsp;</p>\n<p>The recent snow certainly helped coverage, but there&rsquo;s still plenty of open creeks, random hole, and patches of bare ground. The snow is particularly thin at lower elevations and on southerly aspects. Thanks for a great season!!!</p>",
+  "weather_discussion": null,
+  "announcement": null,
+  "status": "published",
+  "media": [
+    {
+      "id": 1,
+      "url": {
+        "large": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/2026y04m18d_Red_NWAC_69e42a88ce096-large.jpg",
+        "medium": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/2026y04m18d_Red_NWAC_69e42a88ce096-medium.jpg",
+        "original": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/2026y04m18d_Red_NWAC_69e42a88ce096.jpg",
+        "thumbnail": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/2026y04m18d_Red_NWAC_69e42a88ce096-thumbnail.jpg"
+      },
+      "type": "image",
+      "title": "Public Observation: Snoqualmie Pass",
+      "caption": "(4/18/2026) Red. Thin, but still enough snow to slide.\n\nImage CC-BY-NC-SA 4.0 Photo: Charlie Hagedorn",
+      "favorite": false
+    },
+    {
+      "id": 2,
+      "url": {
+        "large": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/2026y04m18d_Kendall_69e42a86b371a-large.jpg",
+        "medium": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/2026y04m18d_Kendall_69e42a86b371a-medium.jpg",
+        "original": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/2026y04m18d_Kendall_69e42a86b371a.jpg",
+        "thumbnail": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/2026y04m18d_Kendall_69e42a86b371a-thumbnail.jpg"
+      },
+      "type": "image",
+      "title": "Public Observation: Snoqualmie Pass",
+      "caption": "(4/18/2026) Kendall. Very thin, but some snow moving. Note total lack of tracks.\n\nImage CC-BY-NC-SA 4.0 Photo: Charlie Hagedorn",
+      "favorite": false
+    },
+    {
+      "id": 3,
+      "url": {
+        "large": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_9453_69e16f9c44962-large.jpeg",
+        "medium": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_9453_69e16f9c44962-medium.jpeg",
+        "original": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_9453_69e16f9c44962.jpeg",
+        "thumbnail": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_9453_69e16f9c44962-thumbnail.jpeg"
+      },
+      "type": "image",
+      "title": null,
+      "caption": "(4/16/2026) <p>This natural avalanche ran out of the Bryant Peak Couloir area. It ran an impressive distance down the slope towards Source Lake.&nbsp;</p> Photo: Eddie Schoen",
+      "favorite": false
+    },
+    {
+      "id": 4,
+      "url": {
+        "large": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5883_69e16f9ce0353-large.jpeg",
+        "medium": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5883_69e16f9ce0353-medium.jpeg",
+        "original": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5883_69e16f9ce0353.jpeg",
+        "thumbnail": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5883_69e16f9ce0353-thumbnail.jpeg"
+      },
+      "type": "image",
+      "title": null,
+      "caption": "(4/16/2026) <p>A small intentionally triggered avalanche. Slides like this are common when sunshine warms recent dry snow.&nbsp;</p> Photo: Craig Muderlak",
+      "favorite": false
+    },
+    {
+      "id": 5,
+      "url": {
+        "large": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5543_69e16fa0025f7-large.jpeg",
+        "medium": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5543_69e16fa0025f7-medium.jpeg",
+        "original": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5543_69e16fa0025f7.jpeg",
+        "thumbnail": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5543_69e16fa0025f7-thumbnail.jpeg"
+      },
+      "type": "image",
+      "title": null,
+      "caption": "(4/16/2026) <p>Just a quick moment of sun and... rollerball city! These are often a precursor to natural wet loose avalanches.&nbsp;</p> Photo: Dallas Glass",
+      "favorite": false
+    },
+    {
+      "id": 6,
+      "url": {
+        "large": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5538_69e16f9068ee9-large.jpeg",
+        "medium": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5538_69e16f9068ee9-medium.jpeg",
+        "original": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5538_69e16f9068ee9.jpeg",
+        "thumbnail": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5538_69e16f9068ee9-thumbnail.jpeg"
+      },
+      "type": "image",
+      "title": null,
+      "caption": "(4/16/2026) <p>A snow profile showing all the new snow and the major layers in the upper snowpack.&nbsp;</p> Photo: Dallas Glass",
+      "favorite": false
+    },
+    {
+      "id": 7,
+      "url": {
+        "large": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5471_69d98a9871191-large.jpeg",
+        "medium": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5471_69d98a9871191-medium.jpeg",
+        "original": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5471_69d98a9871191.jpeg",
+        "thumbnail": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/IMG_5471_69d98a9871191-thumbnail.jpeg"
+      },
+      "type": "image",
+      "title": null,
+      "caption": "(4/10/2026) <p>Creek crossings are becoming few and far between. This small bridge won't last much longer.&nbsp;</p> Photo: Dallas Glass",
+      "favorite": false
+    },
+    {
+      "id": 8,
+      "url": {
+        "large": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/null_69d9953da5893-large.jpg",
+        "medium": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/null_69d9953da5893-medium.jpg",
+        "original": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/null_69d9953da5893.jpg",
+        "video_id": "XlR2jzA0leE",
+        "thumbnail": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/null_69d9953da5893-thumbnail.jpg"
+      },
+      "type": "video",
+      "title": "20260410 Alpental",
+      "caption": "(4/11/2026) <p>Let's take a look at all the travel hazards out there today in the Snoqualmie Pass area.&nbsp;</p> Video: Dallas Glass",
+      "favorite": false
+    }
+  ],
+  "weather_data": null,
+  "avalanche_center": {
+    "id": "NWAC",
+    "name": "Northwest Avalanche Center",
+    "url": "https://www.nwac.us/",
+    "city": "Seattle",
+    "state": "WA"
+  },
+  "forecast_avalanche_problems": [
+    {
+      "id": 3014615,
+      "forecast_id": 185078,
+      "avalanche_problem_id": 6,
+      "rank": 1,
+      "likelihood": "possible",
+      "discussion": "<p>Last week&rsquo;s storm snow hasn&rsquo;t fully transitioned into springtime snow (melt forms) on all slopes. Once any thin surface crust breaks down, you could start seeing parades of rollerballs and maybe even a few natural wet loose slides. This time of year, only the steepest, darkest, due northerly aspects can escape the sun.&nbsp;</p>\n<p>Natural avalanches should be isolated to very steep rocky terrain. Often, blobs of snow falling off the cliffs trigger slides below. Be mindful of what&rsquo;s above and around you. If you start to see fresh rollerballs, don&rsquo;t hang out in similar terrain.&nbsp;</p>\n<p>As the surface gets warm and sticky, you may also push piles of wet snow on steep slopes. Fortunately, these should be very easy to anticipate. If conditions get wet and sticky, seek out lower angled terrain.&nbsp;</p>\n<p>Most of these avalanches should stay relatively small. However, they are so dense that they can pack quite a punch for their size. Don&rsquo;t let one drag you off a cliff or into a creek. In bigger terrain, some of these slides could run far downslope and grow large and scary. Those aren&rsquo;t wet loose avalanches you want to mess around with.</p>",
+      "media": {
+        "url": {
+          "large": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/null_69e1a4f332ec8-large.jpg",
+          "medium": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/null_69e1a4f332ec8-medium.jpg",
+          "original": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/null_69e1a4f332ec8.jpg",
+          "video_id": "WBamYF5DmV4",
+          "thumbnail": "https://avalanche-org-media.s3.us-west-2.amazonaws.com/null_69e1a4f332ec8-thumbnail.jpg"
+        },
+        "type": "video",
+        "title": "20260416 Alpental",
+        "caption": "(4/17/2026) <p>Lets take a look at all the new snow and how it's changed the mountains.&nbsp;</p> Video: Dallas Glass"
+      },
+      "location": [
+        "north upper",
+        "northeast upper",
+        "east upper",
+        "southeast upper",
+        "south upper",
+        "southwest upper",
+        "west upper",
+        "northwest upper",
+        "north middle",
+        "northeast middle",
+        "east middle",
+        "southeast middle",
+        "south middle",
+        "southwest middle",
+        "west middle",
+        "northwest middle",
+        "north lower",
+        "northeast lower",
+        "east lower",
+        "southeast lower",
+        "south lower",
+        "southwest lower",
+        "west lower",
+        "northwest lower"
+      ],
+      "size": [
+        "1",
+        "2"
+      ],
+      "name": "Wet Loose",
+      "problem_description": "Wet Loose avalanches are the release of wet unconsolidated snow or slush. These avalanches typically occur within layers of wet snow near the surface of the snowpack, but they may quickly gouge into lower snowpack layers. Like Loose Dry Avalanches, they start at a point and entrain snow as they move downhill, forming a fan-shaped avalanche. Other names for loose-wet avalanches include point-release avalanches or sluffs. Loose Wet avalanches can trigger slab avalanches that break into deeper snow layers.",
+      "icon": "http://api.avalanche.org/img/avalanche_problems/WetLoose.png"
+    }
+  ],
+  "danger": [
+    {
+      "lower": 2,
+      "upper": 2,
+      "middle": 2,
+      "valid_day": "current"
+    },
+    {
+      "lower": null,
+      "upper": null,
+      "middle": null,
+      "valid_day": "tomorrow"
+    }
+  ],
+  "forecast_zone": [
+    {
+      "id": 1653,
+      "name": "Snoqualmie Pass",
+      "url": "http://www.nwac.us/avalanche-forecast/#/snoqualmie-pass",
+      "state": "WA",
+      "zone_id": "3",
+      "config": null
+    }
+  ]
+}
