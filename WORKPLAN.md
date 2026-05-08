@@ -59,6 +59,26 @@ Tasks:
 
 **Acceptance:** Dry-run output contains both avalanche forecast and mountain weather sections, each with its own attribution and source link. Zero edits to `avalanche_forecast.py`, `base.py`, or `schema.py` during this phase. If any of those changed, stop and fix the Phase 1 design.
 
+## Phase 2.5: Add NWS hourly weather as a third product (3-5 hrs)
+
+**Goal:** Add NWS (weather.gov) hourly forecast as a separate, NWS-attributed product alongside the NWAC products. Validates that the plug-in pattern handles a non-NWAC source cleanly.
+
+**Why it earns a phase:** Hour-by-hour temperature, wind, and precipitation are part of how the user already plans backcountry trips, separately from NWAC mountain weather. This is a complementary product, not a substitute. Mountain weather (NWAC) gives alpine prose, snow level, and ridgetop wind; NWS hourly gives structured numeric weather for time-of-day windows.
+
+Tasks:
+
+- Implement `src/products/nws_weather.py` against the `Product` protocol. NWS attribution, issue time from `properties.updated`, source link to the public NWS forecast page.
+- Pydantic models for `gridpoints/{office}/{x},{y}/forecast` and `gridpoints/{office}/{x},{y}/forecast/hourly`. Preserve per-period fields: `temperature`, `windSpeed`, `windDirection`, `probabilityOfPrecipitation`, `shortForecast`, `detailedForecast`, `startTime`, `endTime`.
+- Add `NWSGridPoint` enum (or equivalent) to `src/zones.py` and an `AvalancheZone -> NWSGridPoint` mapping function. Each NWAC zone needs one representative gridpoint. Coordinates to be chosen during implementation; default to the NWAC telemetry site coordinates for the zone where available, otherwise a popular trailhead.
+- Register NWS weather in the pipeline alongside avalanche forecast and NWAC mountain weather.
+- Template renders an NWS section with NWS attribution and issue time. Forecast prose (`detailedForecast`, `shortForecast`) renders verbatim. Hourly periods presented as a structured table or list, not paraphrased.
+- Archive raw responses to `data/raw/YYYY-MM-DD/nws_{zone}.json` (daily forecast) and `nws_hourly_{zone}.json` (hourly forecast).
+- User-Agent matches the project pattern: `NWAC-Daily-Summary/0.1 (amaslov85@gmail.com)`. weather.gov requires a contact User-Agent.
+- Freshness check per product, STALE marker if `properties.updated` > 24h.
+- Unit tests for the new product, the gridpoint mapping, freshness logic, and that NWS attribution never appears alongside NWAC labels in the same section.
+
+**Acceptance:** Dry-run output for Stevens Pass contains avalanche forecast, NWAC mountain weather, and NWS hourly weather sections, each with its own attribution and source link. NWS hourly section shows at least the next 24 hours by period. Zero edits to `avalanche_forecast.py`, `mountain_weather.py`, `base.py`, or `schema.py` during this phase. If any of those changed, stop and fix the design.
+
 ## Phase 3: LLM summarization (4-6 hrs)
 
 **Goal:** Add the AI orientation section. Synthesizes across whatever products are present in `DailyContext`.
