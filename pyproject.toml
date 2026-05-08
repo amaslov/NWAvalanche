@@ -1,0 +1,26 @@
+[project]
+name = "nwac-daily-summary"
+version = "0.1.0"
+description = "Personal-use NWAC daily orientation pipeline."
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.40",
+    "httpx>=0.27",
+    "pydantic>=2.7",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+
+[tool.ruff.format]
+quote-style = "double"
