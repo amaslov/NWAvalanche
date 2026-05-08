@@ -79,6 +79,8 @@ Tasks:
 
 **Acceptance:** Dry-run output for Stevens Pass contains avalanche forecast, NWAC mountain weather, and NWS hourly weather sections, each with its own attribution and source link. NWS hourly section shows at least the next 24 hours by period. Zero edits to `avalanche_forecast.py`, `mountain_weather.py`, `base.py`, or `schema.py` during this phase. If any of those changed, stop and fix the design.
 
+**Offseason note (May 2026):** When Phase 2.5 was first implemented, NWAC mountain weather was offseason-dormant (last MWF published May 3rd; `/api/v1/mountain-weather-forecast` returns empty; `/api/v1/mountain-weather-region-forecast?zone_id=X` returns 500). Phase 2.5 shipped with two products (avalanche forecast and NWS hourly weather), and the pipeline composes N products generically. When Phase 2 (NWAC mountain weather) lands in winter, the third section appears automatically with no orchestrator changes.
+
 ## Phase 3: LLM summarization (4-6 hrs)
 
 **Goal:** Add the AI orientation section. Synthesizes across whatever products are present in `DailyContext`.
