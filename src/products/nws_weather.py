@@ -3,10 +3,15 @@
 Pulls weather.gov gridpoint daily forecast and hourly forecast for one
 representative coordinate per NWAC zone. Renders verbatim NWS prose and a
 multi-day hourly table.
+
+To change a zone's representative point, edit `ZONE_LOCATIONS` to point at
+a different named location. To add a new named location, add an entry to
+`NAMED_LOCATIONS`. Both maps live in this file deliberately.
 """
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 from datetime import datetime
 from typing import Any, Literal
 
@@ -18,19 +23,62 @@ from src.products.base import ProductUnavailable, is_stale
 from src.schema import ProductSource, ValidatedProduct
 from src.zones import AvalancheZone
 
-# Representative coordinate per NWAC zone for NWS gridpoint lookup.
-# These are subjective picks: pass summits or popular trailheads. Adjust freely.
+
+@dataclass(frozen=True)
+class NamedLocation:
+    display_name: str
+    lat: float
+    lon: float
+    note: str = ""
+
+
+# Named locations the project cares about for NWS gridpoint lookup.
+# Add entries freely; coordinates are decimal degrees, north and west positive/negative.
+NAMED_LOCATIONS: dict[str, NamedLocation] = {
+    "STEVENS_PASS": NamedLocation("Stevens Pass", 47.7462, -121.0866, "summit"),
+    "SNOQUALMIE_PASS": NamedLocation("Snoqualmie Pass", 47.4244, -121.4136, "summit"),
+    "MT_BAKER_SKI": NamedLocation("Mt Baker Ski Area", 48.857, -121.679, "ski area base"),
+    "MT_HOOD_TIMBERLINE": NamedLocation(
+        "Mt Hood (Timberline Lodge)", 45.3308, -121.7110, "Timberline Lodge"
+    ),
+    "MT_ST_HELENS": NamedLocation("Mt St Helens", 46.1991, -122.1873, "summit"),
+    "HURRICANE_RIDGE": NamedLocation("Hurricane Ridge", 47.967, -123.498, "Olympic NP"),
+    "WEST_RAINIER": NamedLocation("West Mt Rainier", 46.870, -121.760, "Cougar Rock area"),
+    "MAZAMA": NamedLocation("Mazama", 48.5917, -120.4006, "Methow Valley"),
+    "MISSION_RIDGE": NamedLocation("Mission Ridge", 47.286, -120.399, "ski area"),
+    "WHITE_PASS": NamedLocation("White Pass", 46.6357, -121.3941, "summit"),
+}
+
+
+# Map each NWAC avalanche zone to a NAMED_LOCATIONS key.
+# Edit a value to relocate a zone's NWS representative point.
+ZONE_LOCATIONS: dict[AvalancheZone, str] = {
+    AvalancheZone.OLYMPICS: "HURRICANE_RIDGE",
+    AvalancheZone.WEST_NORTH: "MT_BAKER_SKI",
+    AvalancheZone.WEST_CENTRAL: "WEST_RAINIER",
+    AvalancheZone.WEST_SOUTH: "MT_ST_HELENS",
+    AvalancheZone.STEVENS: "STEVENS_PASS",
+    AvalancheZone.SNOQUALMIE: "SNOQUALMIE_PASS",
+    AvalancheZone.EAST_NORTH: "MAZAMA",
+    AvalancheZone.EAST_CENTRAL: "MISSION_RIDGE",
+    AvalancheZone.EAST_SOUTH: "WHITE_PASS",
+    AvalancheZone.MT_HOOD: "MT_HOOD_TIMBERLINE",
+}
+
+
+def location_for_zone(zone: AvalancheZone) -> NamedLocation:
+    key = ZONE_LOCATIONS.get(zone)
+    if key is None:
+        raise KeyError(f"No NWS location mapped for zone {zone.name}")
+    loc = NAMED_LOCATIONS.get(key)
+    if loc is None:
+        raise KeyError(f"ZONE_LOCATIONS[{zone.name}] points at unknown key {key!r}")
+    return loc
+
+
+# Backwards-compatible: derived view of {zone -> (lat, lon)}.
 ZONE_COORDINATES: dict[AvalancheZone, tuple[float, float]] = {
-    AvalancheZone.OLYMPICS: (47.967, -123.498),  # Hurricane Ridge
-    AvalancheZone.WEST_NORTH: (48.857, -121.679),  # Mt Baker Ski Area
-    AvalancheZone.WEST_CENTRAL: (46.870, -121.760),  # West side, Mt Rainier
-    AvalancheZone.WEST_SOUTH: (46.787, -121.735),  # Paradise (Mt Rainier)
-    AvalancheZone.STEVENS: (47.7462, -121.0866),  # Stevens Pass summit
-    AvalancheZone.SNOQUALMIE: (47.4244, -121.4136),  # Snoqualmie Pass summit
-    AvalancheZone.EAST_NORTH: (48.5917, -120.4006),  # Mazama
-    AvalancheZone.EAST_CENTRAL: (47.286, -120.399),  # Mission Ridge
-    AvalancheZone.EAST_SOUTH: (46.6357, -121.3941),  # White Pass
-    AvalancheZone.MT_HOOD: (45.3308, -121.7110),  # Timberline Lodge
+    z: (location_for_zone(z).lat, location_for_zone(z).lon) for z in AvalancheZone
 }
 
 

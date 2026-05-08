@@ -10,10 +10,13 @@ import pytest
 
 from src.fetchers.nws_api import NWSClient
 from src.products.nws_weather import (
+    NAMED_LOCATIONS,
     ZONE_COORDINATES,
+    ZONE_LOCATIONS,
     NWSPeriod,
     NWSWeather,
     NWSWeatherProduct,
+    location_for_zone,
 )
 from src.zones import AvalancheZone
 
@@ -100,6 +103,31 @@ def test_render_table_has_at_least_24_rows(product: NWSWeatherProduct, raw_nws: 
 def test_all_zones_have_coordinates() -> None:
     missing = [z for z in AvalancheZone if z not in ZONE_COORDINATES]
     assert missing == []
+
+
+def test_all_zones_map_to_a_named_location() -> None:
+    missing = [z for z in AvalancheZone if z not in ZONE_LOCATIONS]
+    assert missing == []
+
+
+def test_zone_location_keys_resolve_to_named_locations() -> None:
+    unresolved = [(z, key) for z, key in ZONE_LOCATIONS.items() if key not in NAMED_LOCATIONS]
+    assert unresolved == []
+
+
+def test_named_locations_include_user_specified_points() -> None:
+    required = {
+        "STEVENS_PASS",
+        "SNOQUALMIE_PASS",
+        "MT_BAKER_SKI",
+        "MT_HOOD_TIMBERLINE",
+        "MT_ST_HELENS",
+    }
+    assert required.issubset(NAMED_LOCATIONS.keys())
+
+
+def test_west_south_uses_mt_st_helens() -> None:
+    assert location_for_zone(AvalancheZone.WEST_SOUTH).display_name == "Mt St Helens"
 
 
 def test_render_does_not_mix_nwac_attribution(product: NWSWeatherProduct, raw_nws: dict) -> None:
